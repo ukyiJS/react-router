@@ -1,0 +1,46 @@
+{
+  "name": "react-router",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "npx simple-git-hooks",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --cache --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.3",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.44.0",
+    "eslint-define-config": "^1.21.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.1",
+    "nano-staged": "^0.8.0",
+    "postcss": "^8.4.24",
+    "simple-git-hooks": "^2.8.1",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.1.6",
+    "vite": "^4.3.9"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "./node_modules/.bin/nano-staged"
+  },
+  "nano-staged": {
+    "**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts}": [
+      "eslint --cache --fix"
+    ]
+  }
+}
