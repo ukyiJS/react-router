@@ -8,7 +8,7 @@ type RouterProps = {
   children: ReactNode;
 };
 
-const getPath = () => window.location.pathname;
+const getPath = (): string => window.location.pathname;
 
 export const RouterContext = createContext<RouterContextProps>({} as RouterContextProps);
 
