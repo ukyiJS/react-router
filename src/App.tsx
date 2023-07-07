@@ -6,11 +6,11 @@ import { Route, Router } from '@/router';
 
 export function App(): ReactNode {
   return (
-      <Router>
-        <Layout>
-          <Route path="/" component={<Index />}></Route>
-          <Route path="/about" component={<About />}></Route>
-        </Layout>
-      </Router>
+    <Router>
+      <Layout>
+        <Route path="/" component={<Index />}></Route>
+        <Route path="/about" component={<About />}></Route>
+      </Layout>
+    </Router>
   );
 }
