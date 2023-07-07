@@ -1,6 +1,7 @@
-export type RouterState = Record<string, unknown>
+export type RouterQuery = Record<string, unknown>
 
 export type RouterContextProps = {
   path: string;
-  push(to: string, state?: RouterState): void;
+  query?: RouterQuery;
+  push(to: string, query?: RouterQuery): void;
 }

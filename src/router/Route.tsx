@@ -9,5 +9,6 @@ type RouteProps = {
 
 export const Route = ({ path, component }: RouteProps): ReactNode => {
   const context = useContext(RouterContext);
-  return context.path === path ? component : null;
+  const [_path] = context.path.split(/[?&]/);
+  return _path === path ? component : null;
 };
